@@ -53,7 +53,7 @@ if $SILENT ; then
 fi
 
 ret=0
-for t in `ls $KUBE_ROOT/hack/verify-*.sh`
+for t in $(ls $KUBE_ROOT/hack/verify-*.sh $KUBE_ROOT/vertical-pod-autoscaler/hack/verify-*.sh)
 do
   if is-excluded $t ; then
     echo "Skipping $t"
